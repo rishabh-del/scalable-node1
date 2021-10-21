@@ -6,7 +6,7 @@ var axios = require('axios')
 
 const { MongoClient } = require("mongodb");
 const app = express()
-const port = 8080
+const port = 3000
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -36,7 +36,7 @@ run().catch(console.dir);
 
 app.post('/app1', (req, res) => {
  
-var url = "http://0.0.0.0:49163/app3"
+var url = "http://0.0.0.0:5000/app3"
  axios.post(url, req.body)
     .then(data=>console.log(data.data))
     .catch(err => console.log(err))
